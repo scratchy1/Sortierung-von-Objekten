@@ -1,0 +1,15 @@
+class KundenKomparator implements Comparator{
+ public int compare(Object obj1, Object obj2){
+  Kunde kunde1=(Kunde) obj1;
+  Kunde kunde2=(Kunde) obj2;
+  if(kunde1.prio()<kunde2.prio()) return -1;
+  if(kunde1.prio()>kunde2.prio()) return  1;
+  return 0;
+  }
+}
+
+/*Hat Objekt intuitive Sortierung, wie z.B. die Klasse Datum, nutze Comparable,
+gibt es kein eindeutiges Kriterium, nutze einen Komparator.
+So lassen sich später weitere Sortierkriterien hinzufügen, ohne die Klasse der zu sortierenden Objekte 
+anpassen zu müssen.*/
+  
