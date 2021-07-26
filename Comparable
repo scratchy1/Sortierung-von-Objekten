@@ -1,0 +1,10 @@
+Class Kunde implements Comparable{
+ Priorität prio,
+ String name;
+ public int compareTo(Object obj) throws ClassCastException{
+  Kunde andererKunde= (Kunde) obj;
+  if (prio.value<andererKunde.prio.value) return -1;
+  if (prio.value>andererKunde.prio.value) return  1;
+  return name.compareTo(andererKunde.name);
+ }
+}
